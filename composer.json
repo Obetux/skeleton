@@ -1,5 +1,6 @@
 {
     "type": "project",
+	"name": "obetux/skeleton",
     "license": "proprietary",
     "authors": [
         {
