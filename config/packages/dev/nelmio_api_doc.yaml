@@ -1,0 +1,8 @@
+# Redefino el titulo para idicar DEV y habilito url de Sandbox
+nelmio_api_doc:
+    documentation:
+        info:
+            title: TEST MODULE - DEV
+    areas:
+        path_patterns: # an array of regexps
+            - ^/sandbox

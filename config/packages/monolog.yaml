@@ -1,0 +1,16 @@
+# Se deben definir los canales y handlers necesarios
+# En todos los casos deben implementar el formatter qubit.line.formatter
+monolog:
+    use_microseconds: false
+    channels: ['test']
+    handlers:
+        # this "file_log" key could be anything
+        test_log:
+            type:  rotating_file
+            # log to var/logs/(environment).log
+            path: "%kernel.logs_dir%/test_%kernel.environment%.log"
+            # log *all* messages (debug is lowest level)
+            level: info
+            formatter: qubit.line.formatter
+            max_files: 30
+            channels: [test]
